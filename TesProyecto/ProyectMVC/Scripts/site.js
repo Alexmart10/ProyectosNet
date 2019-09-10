@@ -1,0 +1,1 @@
+﻿$('#Test').click(function () { document.location = '@Url.Action("About","HomeController")'; });

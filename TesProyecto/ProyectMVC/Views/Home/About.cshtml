@@ -1,0 +1,55 @@
+﻿
+@model  List<ProyectMVC.Models.VentasProducto>
+
+@{
+    ViewBag.Title = "About";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="About" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                Codigo
+            </th>
+            <th>
+                Descripcion
+            </th>
+            <th>
+                Cantidad Venta
+            </th>
+            <th>
+                Total
+            </th>
+        </tr>
+
+        @foreach (var articulo in Model)
+        {
+            <tr>
+                <td>
+                    @articulo.Codigo
+                </td>
+                <td>
+                   
+                    @articulo.Descripcion
+                </td>
+                <td>
+                    @articulo.CantidadVenta
+                </td>
+                <td>
+                    @articulo.Total
+                </td>
+            </tr>
+        }
+
+    </table>
+    <button id="Test" type="button"  name="Consultar" onclick="location.href='@Url.Action("About", "Home")'" />
+</body>
+</html>
+<script src="~/Scripts/site.js"></script>
